@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE Campus Events</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 650px; margin: 30px auto; padding: 0 15px; background: #0f172a; color: #f8fafc; }
+    h2 { color: #38bdf8; }
+    .box { background: #1e293b; padding: 18px; border-radius: 8px; margin-bottom: 20px; }
+    input, button { padding: 9px; margin: 5px 0; border-radius: 6px; border: 1px solid #334155; background: #0b1120; color: #fff; width: 100%; box-sizing: border-box; }
+    button { background: #0284c7; font-weight: bold; cursor: pointer; border: none; }
+    button:hover { background: #0369a1; }
+    .event-card { background: #273549; padding: 12px; border-radius: 6px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+    .btn-delete { background: #ef4444; width: auto; padding: 6px 12px; margin: 0; }
+    #message { color: #f87171; font-size: 0.9rem; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <h2>Campus Events Manager</h2>
+
+  <div class="box">
+    <form id="eventForm">
+      <input type="text" id="eventName" placeholder="Event Name" required />
+      <input type="date" id="eventDate" required />
+      <input type="text" id="eventPlace" placeholder="Location / Place" required />
+      <button type="submit">Add Event</button>
+      <div id="message"></div>
+    </form>
+  </div>
+
+  <div class="box">
+    <input type="text" id="searchInput" placeholder="Search events by title or venue..." />
+    <div id="eventList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
